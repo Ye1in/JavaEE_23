@@ -5,5 +5,9 @@
 	<include file="struts-default.xml" />
 	<package name="default" extends="struts-default">
 		<!--以后在这里添加action-->
+		<action name="register" class="userAction" method="register">
+			<result name="success">/register_success.jsp</result>
+		</action>
+
 	</package>
 </struts>
