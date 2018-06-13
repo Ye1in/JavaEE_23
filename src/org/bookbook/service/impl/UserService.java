@@ -7,7 +7,6 @@ import org.bookbook.service.IUserService;
 public class UserService implements IUserService {
 
 	private IUserDAO userDAO;
-
 	public void setUserDAO(IUserDAO userDAO) {
 		this.userDAO = userDAO;
 	}
