@@ -17,8 +17,7 @@
 		<action name="logout" class="org.bookbook.action.UserAction" method="logout">
     		<result name="success">/index.jsp</result>
 		</action>
-		
-		<action name="browseCatalog" class="org.bookbook.action.bookAction" method="browseCatalog">
+		<action name="browseCatalog" class="org.bookbook.action.BookAction" method="browseCatalog">
      		<result name="success">/menu.jsp</result>
 		</action>
 		<action name="newBook" class="org.bookbook.action.bookAction" method="newBook">

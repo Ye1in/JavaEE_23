@@ -49,7 +49,7 @@
 			<ref bean="userService" />
 		</property>
 	</bean>
-	
+
 	<bean id="catalogDAO" class="org.bookbook.dao.impl.CatalogDAO">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
@@ -58,21 +58,22 @@
 			<ref bean="catalogDAO" />
 		</property>
 	</bean>
-	<bean id="bookAction" class="org.bookbook.action.BookAction">
-		<property name="catalogService">
-			<ref bean="catalogService" />
-		</property>
-		<property name="bookService">
-			<ref bean="bookService" />
-		</property>
-	</bean>
-	
+
+
 	<bean id="bookDAO" class="org.bookbook.dao.impl.BookDAO">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	<bean id="bookService" class="org.bookbook.service.impl.BookService">
 		<property name="bookDAO">
 			<ref bean="bookDAO" />
+		</property>
+	</bean>
+	<bean id="bookAction" class="org.bookbook.action.BookAction">
+		<property name="catalogService">
+			<ref bean="catalogService" />
+		</property>
+		<property name="bookService">
+			<ref bean="bookService" />
 		</property>
 	</bean>
 
