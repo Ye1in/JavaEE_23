@@ -16,4 +16,10 @@ public class UserService implements IUserService {
 		this.userDAO.saveUser(user);
 	}
 
+	public Usertable validateUser(String userName,String userPassword) {
+		return this.userDAO.validateUser(userName, userPassword);
+	}
+	
+	
+
 }
