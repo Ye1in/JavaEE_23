@@ -9,9 +9,18 @@
 			method="register">
 			<result name="success">/register_success.jsp</result>
 		</action>
-		<action name="addToCart" class="org.bookbook.action.BookAction"
+		<action name="addToCart" class="org.bookbook.action.ShoppingAction"
 			method="addToCart">
 			<result name="success">/addToCart_success.jsp</result>
+		</action>
+		<action name="updateCart" class="org.bookbook.action.ShoppingAction"
+			method="updateCart">
+			<result name="success">/showCart.jsp</result>
+		</action>
+		<action name="checkout" class="org.bookbook.action.OrderAction"
+			method="checkout">
+			<result name="success">/checkout_success.jsp</result>
+			<result name="login">/login.jsp</result>
 		</action>
 
 	</package>

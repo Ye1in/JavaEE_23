@@ -7,4 +7,6 @@ public interface IBookService {
 
 	public void savebook(Book book);
 
+	public Book getBookById(Integer bookid);
+
 }

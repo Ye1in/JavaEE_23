@@ -25,18 +25,4 @@ public class BookAction extends ActionSupport {
 		this.bookservice = bookservice;
 	}
 
-	public String addToCart() {
-		HttpSession session = ServletActionContext.getRequest().getSession();
-		Map<Book, Integer> cart = (Map<Book, Integer>) session.getAttribute("cart");
-		if (cart == null) {
-			cart = new HashMap<Book, Integer>();
-		}
-		if (cart.containsKey(book)) {
-			cart.put(book, cart.get(book) + 1);
-		} else {
-			cart.put(book, 1);
-		}
-		session.setAttribute("cart", cart);
-		return SUCCESS;
-	}
 }

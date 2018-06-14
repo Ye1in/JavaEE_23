@@ -91,5 +91,11 @@
 			<ref bean="bookService" />
 		</property>
 	</bean>
+	
+	<bean id="shoppingAction" class="org.bookbook.action.ShoppingAction">
+		<property name="bookService">
+			<ref bean="bookService" />
+		</property>
+	</bean>
 
 </beans>

@@ -1,9 +1,7 @@
 package org.bookbook.service.impl;
 
 import org.bookbook.dao.IBookDAO;
-import org.bookbook.dao.IOrderItemDAO;
 import org.bookbook.model.Book;
-import org.bookbook.model.Orderitem;
 import org.bookbook.service.IBookService;
 
 public class BookService implements IBookService {
@@ -17,4 +15,7 @@ public class BookService implements IBookService {
 		this.bookDAO.savebook(book);
 	}
 
+	public Book getBookById(Integer bookid){
+		return this.bookDAO.getBookById(bookid);
+	}
 }

@@ -7,4 +7,6 @@ public interface IOrderDAO {
 	public void saveOrder(Orders order);
 
 	public void updateOrder(Orders order);
+
+	public int getOrderID();
 }

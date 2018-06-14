@@ -19,4 +19,8 @@ public class OrderService implements IOrderService {
 		this.orderDAO.updateOrder(order);
 	}
 
+	public int getOrderID() {
+		return orderDAO.getOrderID();
+	}
+
 }
