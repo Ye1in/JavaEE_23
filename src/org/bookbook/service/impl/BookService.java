@@ -7,6 +7,7 @@ import org.bookbook.service.IBookService;
 public class BookService implements IBookService {
 
 	private IBookDAO bookDAO;
+
 	public void setBookDAO(IBookDAO bookDAO) {
 		this.bookDAO = bookDAO;
 	}
@@ -15,7 +16,7 @@ public class BookService implements IBookService {
 		this.bookDAO.savebook(book);
 	}
 
-	public Book getBookById(Integer bookid){
+	public Book getBookById(Integer bookid) {
 		return this.bookDAO.getBookById(bookid);
 	}
 }

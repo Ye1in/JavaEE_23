@@ -22,7 +22,7 @@ public class UserAction extends ActionSupport {
 	}
 
 	public String register() throws Exception {
-//		System.out.println(user.getUsername());
+		// System.out.println(user.getUsername());
 		Usertable user1 = new Usertable();
 		user1.setUsername(user.getUsername());
 		userService.saveUser(user1);

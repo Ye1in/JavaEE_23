@@ -7,4 +7,5 @@ public interface IBookDAO {
 	public void savebook(Book book);
 
 	public Book getBookById(Integer bookid);
+
 }

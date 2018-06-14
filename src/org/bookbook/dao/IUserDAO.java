@@ -6,4 +6,6 @@ public interface IUserDAO {
 
 	public void saveUser(Usertable user);
 
+	public boolean exitUser(String username);
+
 }

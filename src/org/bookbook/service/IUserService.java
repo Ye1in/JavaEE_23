@@ -6,4 +6,5 @@ public interface IUserService {
 
 	public void saveUser(Usertable user);
 
+	public boolean exitUser(String username);
 }

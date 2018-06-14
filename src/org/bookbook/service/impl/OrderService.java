@@ -7,6 +7,7 @@ import org.bookbook.service.IOrderService;
 public class OrderService implements IOrderService {
 
 	private IOrderDAO orderDAO;
+
 	public void setOrderDAO(IOrderDAO orderDAO) {
 		this.orderDAO = orderDAO;
 	}
@@ -14,8 +15,8 @@ public class OrderService implements IOrderService {
 	public void saveOrder(Orders order) {
 		this.orderDAO.saveOrder(order);
 	}
-	
-	public void updateOrder(Orders order){
+
+	public void updateOrder(Orders order) {
 		this.orderDAO.updateOrder(order);
 	}
 

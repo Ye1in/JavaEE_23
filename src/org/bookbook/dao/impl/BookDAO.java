@@ -13,7 +13,8 @@ public class BookDAO extends HibernateDaoSupport implements IBookDAO {
 	}
 
 	public Book getBookById(Integer bookid) {
-		List<Book> list = this.getHibernateTemplate().find("from book where bookid=?", bookid);
+		List<Book> list = this.getHibernateTemplate().find(
+				"from book where bookid=?", bookid);
 		if (list.isEmpty()) {
 			return null;
 		} else {
