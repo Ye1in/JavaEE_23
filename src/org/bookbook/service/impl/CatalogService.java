@@ -4,8 +4,6 @@ import java.util.List;
 import org.bookbook.dao.ICatalogDAO;
 import org.bookbook.service.ICatalogService;
 
-import org.bookbook.service.ICatalogService;
-
 public class CatalogService implements ICatalogService {
 	private ICatalogDAO catalogDAO;
 	public List getAllCatalogs(){

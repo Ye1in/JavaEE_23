@@ -1,10 +1,12 @@
 package org.bookbook.service.impl;
 
+import java.util.Set;
+
 import org.bookbook.dao.IOrderItemDAO;
 import org.bookbook.model.Orderitem;
-import org.bookbook.service.IOderItemService;
+import org.bookbook.service.IOrderItemService;
 
-public class OrderItemService implements IOderItemService {
+public class OrderItemService implements IOrderItemService {
 
 	private IOrderItemDAO orderitemDAO;
 
@@ -14,6 +16,10 @@ public class OrderItemService implements IOderItemService {
 
 	public void saveOrderitem(Orderitem orderitem) {
 		this.orderitemDAO.saveOrderItem(orderitem);
+	}
+
+	public void saveOrderItem(Set<Orderitem> orderitems) {
+		this.orderitemDAO.saveOrderItem(orderitems);
 	}
 
 }

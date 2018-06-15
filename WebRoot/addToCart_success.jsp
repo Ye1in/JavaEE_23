@@ -24,7 +24,7 @@
 						<input type="hidden"
 							value="<s:property value="#session['catalogid']"/>">
 						<input type="image" name="submit"
-							src="/bookstore/picture/continue.gif" />
+							src="./picture/continue.gif" />
 					</form>
 				</div>
 			</div>

@@ -44,9 +44,10 @@ public class BookDAO extends HibernateDaoSupport implements IBookDAO {
 	public List getBookByBookName(String name) {
 		Session session = this.getHibernateTemplate().getSessionFactory()
 				.openSession();
-		Query query = session.createQuery("from Book b where LOWER(b.bookname) like LOWER(:name)");
-		query.setString("name", ""+name+"%");
-		List books =query.list();
+		Query query = session
+				.createQuery("from Book b where LOWER(b.bookname) like LOWER(:name)");
+		query.setString("name", "" + name + "%");
+		List books = query.list();
 		session.close();
 		return books;
 
@@ -57,13 +58,12 @@ public class BookDAO extends HibernateDaoSupport implements IBookDAO {
 	}
 
 	public Book getBookById(Integer bookid) {
-		List<Book> list = this.getHibernateTemplate().find(
-				"from book where bookid=?", bookid);
-		if (list.isEmpty()) {
-			return null;
-		} else {
-			return list.get(0);
-		}
+		Session session = this.getHibernateTemplate().getSessionFactory()
+				.openSession();
+		Query query = session.createQuery("from Book b where b.bookid=?");
+		query.setParameter(0, bookid);
+		Book result = (Book) query.uniqueResult();
+		return result;
 	}
 
 }

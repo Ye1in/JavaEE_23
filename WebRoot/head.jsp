@@ -17,7 +17,7 @@
 				<div class=head_right_nei>
 					<div class=head_top>
 						<div class=head_buy>
-							<strong> <a href="/bookstore/showCart.jsp">
+							<strong> <a href="./showCart.jsp">
 							<IMG height=15 src="picture/buy01.jpg" width=16>&nbsp;购物车</a>
 							</strong> |
 							<a href="#">用户FAQ</a>

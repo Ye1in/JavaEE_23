@@ -71,6 +71,9 @@
 		<property name="orderService">
 			<ref bean="orderService" />
 		</property>
+		<property name="orderitemService">
+			<ref bean="orderitemService" />
+		</property>
 	</bean>
 
 	<bean id="orderitemDAO" class="org.bookbook.dao.impl.OrderItemDAO">

@@ -4,6 +4,7 @@ import java.util.Map;
 import org.bookbook.model.Book;
 import org.bookbook.model.Cart;
 import org.bookbook.model.Orderitem;
+import org.bookbook.model.Usertable;
 import org.bookbook.service.impl.BookService;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -15,6 +16,11 @@ public class ShoppingAction extends ActionSupport {
 	private Integer quantity;
 
 	public String addToCart() throws Exception {
+		// 获得购物车对象
+		Map session = ActionContext.getContext().getSession();
+		if (session.get("user") == null) {
+			return LOGIN;
+		}
 		// 得到要购买的图书
 		Book book = bookService.getBookById(bookid);
 		// 创建一个订单项
@@ -23,8 +29,6 @@ public class ShoppingAction extends ActionSupport {
 		orderitem.setBook(book);
 		// 设置要购买图书数量
 		orderitem.setQuantity(quantity);
-		Map session = ActionContext.getContext().getSession();
-		// 获得购物车对象
 		Cart cart = (Cart) session.get("cart");
 		// 如果没有就创建一个
 		if (cart == null) {

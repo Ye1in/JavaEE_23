@@ -1,13 +1,13 @@
 package org.bookbook.action;
 
 import org.bookbook.model.Orderitem;
-import org.bookbook.service.IOderItemService;
+import org.bookbook.service.IOrderItemService;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class OrderItemAction extends ActionSupport {
 
 	protected Orderitem orderitem;
-	protected IOderItemService orderitemService;
+	protected IOrderItemService orderitemService;
 
 	public Orderitem getOrderitem() {
 		return orderitem;
@@ -17,7 +17,7 @@ public class OrderItemAction extends ActionSupport {
 		this.orderitem = orderitem;
 	}
 
-	public void setOrderitemService(IOderItemService orderitemService) {
+	public void setOrderitemService(IOrderItemService orderitemService) {
 		this.orderitemService = orderitemService;
 	}
 

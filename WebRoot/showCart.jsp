@@ -73,7 +73,7 @@
 					消费金额:
 					<s:property value="#session.cart.totalPrice" />
 					元&nbsp;&nbsp;&nbsp;
-					<a href="checkout.action"><img src="/bookstore/picture/count.gif" /> </a>
+					<a href="checkout.action"><img src="./picture/count.gif" /> </a>
 					</s:if>
 					<s:else>
 						对不起,您还没有选购任何书籍!
