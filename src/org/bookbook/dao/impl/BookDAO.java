@@ -44,8 +44,8 @@ public class BookDAO extends HibernateDaoSupport implements IBookDAO {
 	public List getBookByBookName(String name) {
 		Session session = this.getHibernateTemplate().getSessionFactory()
 				.openSession();
-		Query query = session.createQuery("from Book b where b.bookname=?");
-		query.setParameter(0, name);
+		Query query = session.createQuery("from Book b where LOWER(b.bookname) like LOWER(:name)");
+		query.setString("name", ""+name+"%");
 		List books =query.list();
 		session.close();
 		return books;
