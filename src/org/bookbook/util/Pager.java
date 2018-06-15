@@ -1,4 +1,4 @@
-package org.bookstore.util;
+package org.bookbook.util;
 
 public class Pager {
 	private int currentPage;
@@ -13,6 +13,7 @@ public class Pager {
 	public Pager(int currentPage, int totalSize) {
 		this.currentPage = currentPage;
 		this.totalSize = totalSize;
+		this.totalPage = totalSize / 3 + 1;
 	}
 
 	public int getCurrentPage() {

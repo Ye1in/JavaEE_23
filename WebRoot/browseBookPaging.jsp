@@ -36,7 +36,7 @@
 							<tr>
 								<td width=200 align="center">
 									<img
-										src="/bookstore/picture/<s:property value="#book.picture"/>"
+										src="./picture/<s:property value="#book.picture"/>"
 										width="100">
 								</td>
 								<td valign="top" width=400>
@@ -60,7 +60,7 @@
 													<input type="hidden"value="<s:property value="#book.bookid"/>"
 														name="bookid">
 													<input type="image" name="submit"
-														src="/bookstore/picture/buy.gif" />
+														src="./picture/buy.gif" />
 												</form>
 											</td>
 										</tr>

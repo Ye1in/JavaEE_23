@@ -1,4 +1,4 @@
-<!DOCTYPE struts PUBLIC
+﻿<!DOCTYPE struts PUBLIC
    	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
    	"http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
@@ -16,6 +16,36 @@
 		<action name="searchBook" class="org.bookbook.action.BookAction"
 			method="searchBook">
 			<result name="success">/searchBook_result.jsp</result>
+		</action>
+		<action name="login" class="org.bookbook.action.UserAction"
+			method="login">
+			<result name="success">/login_success.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<action name="addToCart" class="org.bookbook.action.ShoppingAction"
+			method="addToCart">
+			<result name="success">/addToCart_success.jsp</result>
+		</action>
+		<action name="updateCart" class="org.bookbook.action.ShoppingAction"
+			method="updateCart">
+			<result name="success">/showCart.jsp</result>
+		</action>
+		<action name="checkout" class="org.bookbook.action.OrderAction"
+			method="checkout">
+			<result name="success">/checkout_success.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+		<action name="logout" class="org.bookbook.action.UserAction"
+			method="logout">
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="browseCatalog" class="org.bookbook.action.BookAction"
+			method="browseCatalog">
+			<result name="success">/menu.jsp</result>
+		</action>
+		<action name="newBook" class="org.bookbook.action.bookAction"
+			method="newBook">
+			<result name="success">/newBook_success.jsp</result>
 		</action>
 	</package>
 </struts>
