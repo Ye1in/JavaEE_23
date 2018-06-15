@@ -42,9 +42,13 @@ public class BookDAO extends HibernateDaoSupport implements IBookDAO {
 	}
 
 	public List getBookByBookName(String name) {
-
-		return this.getHibernateTemplate().find(
-				"select * from book where bookname=?", name);
+		Session session = this.getHibernateTemplate().getSessionFactory()
+				.openSession();
+		Query query = session.createQuery("from Book b where b.bookname=?");
+		query.setParameter(0, name);
+		List books =query.list();
+		session.close();
+		return books;
 
 	}
 
