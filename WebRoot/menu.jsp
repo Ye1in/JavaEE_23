@@ -15,8 +15,7 @@
 			<s:iterator value="#request['catalogs']" id="catalog">
 				<li>
 					<a
-						href="browseBookPaging.action?catalogid=
-							<s:property value="#catalog.catalogid"/>"target=_self> 
+						href="browseBookPaging.action?catalogid=<s:property value="#catalog.catalogid"/>"target=_self> 
 							<s:property value="#catalog.catalogname" />
 					</a>
 				</li>

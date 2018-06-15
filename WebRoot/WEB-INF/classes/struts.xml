@@ -5,9 +5,17 @@
 	<include file="struts-default.xml" />
 	<package name="default" extends="struts-default">
 		<!--以后在这里添加action-->
-		<action name="register" class="userAction" method="register">
+		<action name="register" class="org.bookbook.action.UserAction"
+			method="register">
 			<result name="success">/register_success.jsp</result>
 		</action>
-
+		<action name="browseBookPaging" class="org.bookbook.action.BookAction"
+			method="browseBookPaging">
+			<result name="success">/browseBookPaging.jsp</result>
+		</action>
+		<action name="searchBook" class="org.bookbook.action.BookAction"
+			method="searchBook">
+			<result name="success">/searchBook_result.jsp</result>
+		</action>
 	</package>
 </struts>
