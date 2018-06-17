@@ -37,38 +37,39 @@
 							<font color="blue">您购物车中图书</font>
 						</h3>
 						<div class="info_bk1">
-						<s:iterator value="items" id="item">
-							<s:form action="updateCart.action" method="post">
-								<table width="600" border="0">
-									<tr align="left">
-										<td width="50">
-											书名：
-										</td>
-										<td width="100">
-											<s:property value="value.book.bookname" />
-										</td>
-										<td width="50">
-											价格：
-										</td>
-										<td width="50">
-											<s:property value="value.book.price" />
-										</td>
-										<td width="50">
-											数量：
-										</td>
-										<td width="50">
-											<input type="text" name="quantity" value="<s:property  value="value.quantity"/>" size="4"
-												onblur="check(this)" />
-											<input type="hidden" name="bookid" value="
-											<s:property  value="value.book.bookid"/>" />
-										</td>
-										<td width="50">
-											<input type="submit" value="更新" />
-										</td>
-									</tr>
-								</table>
-							</s:form>
-						</s:iterator>
+							<s:iterator value="items" id="item">
+								<s:form action="updateCart.action" method="post">
+									<table width="600" border="0">
+										<tr align="left">
+											<td width="50">
+												书名：
+											</td>
+											<td width="100">
+												<s:property value="value.book.bookname" />
+											</td>
+											<td width="50">
+												价格：
+											</td>
+											<td width="50">
+												<s:property value="value.book.price" />
+											</td>
+											<td width="50">
+												数量：
+											</td>
+											<td width="50">
+												<input type="text" name="quantity"
+													value="<s:property value="value.quantity"/>" size="4"
+													onblur="check(this)" />
+												<input type="hidden" name="bookid"
+													value="<s:property value="value.book.bookid"/>" />
+											</td>
+											<td width="50">
+												<input type="submit" value="更新" />
+											</td>
+										</tr>
+									</table>
+								</s:form>
+							</s:iterator>
 						</div>
 					消费金额:
 					<s:property value="#session.cart.totalPrice" />

@@ -50,8 +50,7 @@
 													ÊýÁ¿:
 													<input type="text" name="quantity" 
 													value="0" size="4" />
-													<input  type="hidden"value="
-													<s:property value="#book.bookid"/>" 
+													<input  type="hidden"value="<s:property value="#book.bookid"/>" 
 															name="bookid">
 													<input type="image" name="submit"
 													src="./picture/buy.gif" />

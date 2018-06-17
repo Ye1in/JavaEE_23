@@ -4,7 +4,6 @@ import java.util.Map;
 import org.bookbook.model.Book;
 import org.bookbook.model.Cart;
 import org.bookbook.model.Orderitem;
-import org.bookbook.model.Usertable;
 import org.bookbook.service.impl.BookService;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -33,6 +32,10 @@ public class ShoppingAction extends ActionSupport {
 		// 如果没有就创建一个
 		if (cart == null) {
 			cart = new Cart();
+		}
+		if (cart.getItems().containsKey(bookid)) {
+			orderitem.setQuantity(cart.getItems().get(bookid).getQuantity()
+					+ quantity);
 		}
 		// 把图书的ID和订单项添加入购物车
 		cart.addBook(bookid, orderitem);

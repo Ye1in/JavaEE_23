@@ -19,14 +19,14 @@
 	<div class=info_bk1>
    <s:iterator value="#request['books']" id="book">
    <div class=xh5>
-      <img  height=105 width=80 src="/bookstore/picture/<s:property value="#book.picture"/>"/><BR>
+      <img  height=105 width=80 src="./picture/<s:property value="#book.picture"/>"/><BR>
       <s:property value="#book.bookname"/>
        <br>价格:<s:property value="#book.price"/>元<br>
        <form action="addToCart.action" method="post">
           数量:<input type="text" name="quantity" id="quantity" value="0" size="4" 
 						onblur="check(this);"/>
           <input type="hidden" value="<s:property value="#book.bookid"/>" name="bookid">
-          <input type="image" name="submit" src="/bookstore/picture/buy.gif"/>
+          <input type="image" name="submit" src="./picture/buy.gif"/>
        </form>
     </div>
     </s:iterator>

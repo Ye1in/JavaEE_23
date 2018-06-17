@@ -44,7 +44,7 @@
 			method="browseCatalog">
 			<result name="success">/menu.jsp</result>
 		</action>
-		<action name="newBook" class="org.bookbook.action.bookAction"
+		<action name="newBook" class="org.bookbook.action.BookAction"
 			method="newBook">
 			<result name="success">/newBook_success.jsp</result>
 		</action>

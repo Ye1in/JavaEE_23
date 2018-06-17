@@ -22,4 +22,7 @@ public class OrderItemService implements IOrderItemService {
 		this.orderitemDAO.saveOrderItem(orderitems);
 	}
 
+	public int getOrderItemID() {
+		return this.orderitemDAO.getOrderItemID();
+	}
 }

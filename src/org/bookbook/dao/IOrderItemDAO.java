@@ -10,4 +10,5 @@ public interface IOrderItemDAO {
 
 	public void saveOrderItem(Set<Orderitem> orderitems);
 
+	public int getOrderItemID();
 }

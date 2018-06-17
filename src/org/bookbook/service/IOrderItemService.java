@@ -10,4 +10,5 @@ public interface IOrderItemService {
 
 	public void saveOrderItem(Set<Orderitem> orderitems);
 
+	public int getOrderItemID();
 }

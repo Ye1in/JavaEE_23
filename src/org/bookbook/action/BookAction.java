@@ -18,6 +18,39 @@ public class BookAction extends ActionSupport {
 	private int currentPage = 1;
 	private String bookname;
 
+	
+
+	public String browseBookPaging() {
+		Pager pager = new Pager(currentPage, bookService
+				.getTotalByCatalog(catalogid));
+		List books = bookService.getBookByCatalogidPaging(catalogid,
+				currentPage, 3);
+		Map request = (Map) ActionContext.getContext().get("request");
+		request.put("books", books);
+		request.put("pager", pager);
+		return SUCCESS;
+	}
+
+	public String searchBook() {
+		List books = bookService.getBookByBookName(bookname);
+		Map request = (Map) ActionContext.getContext().get("request");
+		request.put("books", books);
+		return SUCCESS;
+	}
+
+	public String browseCatalog() throws Exception {
+		List catalogs = catalogService.getAllCatalogs();
+		Map request = (Map) ActionContext.getContext().get("request");
+		request.put("catalogs", catalogs);
+		return SUCCESS;
+	}
+
+	public String newBook() throws Exception {
+		List books = bookService.getNewBook();
+		Map request = (Map) ActionContext.getContext().get("request");
+		request.put("books", books);
+		return SUCCESS;
+	}
 	public void setCatalogService(ICatalogService catalogService) {
 		this.catalogService = catalogService;
 	}
@@ -56,37 +89,5 @@ public class BookAction extends ActionSupport {
 
 	public void setBookname(String bookname) {
 		this.bookname = bookname;
-	}
-
-	public String browseBookPaging() {
-		Pager pager = new Pager(currentPage, bookService
-				.getTotalByCatalog(catalogid));
-		List books = bookService.getBookByCatalogidPaging(catalogid,
-				currentPage, 3);
-		Map request = (Map) ActionContext.getContext().get("request");
-		request.put("books", books);
-		request.put("pager", pager);
-		return SUCCESS;
-	}
-
-	public String searchBook() {
-		List books = bookService.getBookByBookName(bookname);
-		Map request = (Map) ActionContext.getContext().get("request");
-		request.put("books", books);
-		return SUCCESS;
-	}
-
-	public String browseCatalog() throws Exception {
-		List catalogs = catalogService.getAllCatalogs();
-		Map request = (Map) ActionContext.getContext().get("request");
-		request.put("catalogs", catalogs);
-		return SUCCESS;
-	}
-
-	public String newBook() throws Exception {
-		List books = bookService.getNewBook();
-		Map request = (Map) ActionContext.getContext().get("request");
-		request.put("books", books);
-		return SUCCESS;
 	}
 }
