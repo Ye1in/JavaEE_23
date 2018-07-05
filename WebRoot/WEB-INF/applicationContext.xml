@@ -10,8 +10,8 @@
 		<property name="url"
 			value="jdbc:mysql://whitenight.xin:3306/bookstore?charactorEncoding=utf8">
 		</property>
-		<property name="username" value="bookmanager"></property>
-		<property name="password" value="147258"></property>
+		<property name="username" value="usr"></property>
+		<property name="password" value="pwd"></property>
 	</bean>
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
