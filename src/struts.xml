@@ -5,46 +5,46 @@
 	<include file="struts-default.xml" />
 	<package name="default" extends="struts-default">
 		<!--以后在这里添加action-->
-		<action name="register" class="org.bookbook.action.UserAction"
+		<action name="register" class="userAction"
 			method="register">
 			<result name="success">/register_success.jsp</result>
 		</action>
-		<action name="browseBookPaging" class="org.bookbook.action.BookAction"
+		<action name="browseBookPaging" class="bookAction"
 			method="browseBookPaging">
 			<result name="success">/browseBookPaging.jsp</result>
 		</action>
-		<action name="searchBook" class="org.bookbook.action.BookAction"
+		<action name="searchBook" class="bookAction"
 			method="searchBook">
 			<result name="success">/searchBook_result.jsp</result>
 		</action>
-		<action name="login" class="org.bookbook.action.UserAction"
+		<action name="login" class="userAction"
 			method="login">
 			<result name="success">/login_success.jsp</result>
 			<result name="error">/login.jsp</result>
 		</action>
-		<action name="addToCart" class="org.bookbook.action.ShoppingAction"
+		<action name="addToCart" class="shoppingAction"
 			method="addToCart">
 			<result name="success">/addToCart_success.jsp</result>
 			<result name="login">/login.jsp</result>
 		</action>
-		<action name="updateCart" class="org.bookbook.action.ShoppingAction"
+		<action name="updateCart" class="shoppingAction"
 			method="updateCart">
 			<result name="success">/showCart.jsp</result>
 		</action>
-		<action name="checkout" class="org.bookbook.action.OrderAction"
+		<action name="checkout" class="orderAction"
 			method="checkout">
 			<result name="success">/checkout_success.jsp</result>
 			<result name="login">/login.jsp</result>
 		</action>
-		<action name="logout" class="org.bookbook.action.UserAction"
+		<action name="logout" class="userAction"
 			method="logout">
 			<result name="success">/index.jsp</result>
 		</action>
-		<action name="browseCatalog" class="org.bookbook.action.BookAction"
+		<action name="browseCatalog" class="bookAction"
 			method="browseCatalog">
 			<result name="success">/menu.jsp</result>
 		</action>
-		<action name="newBook" class="org.bookbook.action.BookAction"
+		<action name="newBook" class="bookAction"
 			method="newBook">
 			<result name="success">/newBook_success.jsp</result>
 		</action>
